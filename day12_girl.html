@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>day12_girl.html</title>
+	<style type="text/css">
+		#girl{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<img src='girl.png' id='girl'/>
+	<script type="text/javascript">
+		window.onload=function(){
+		var girl = document.getElementById('girl');
+		window.onkeydown=function(event){//所有需要 event的都要把event传进去
+			if(event.keyCode==37){
+				girl.src='girl_left.png';
+				girl.style.left = girl.offsetLeft - 15+'px';
+			}else if (event.keyCode==38) {
+				girl.src='girl_top.png';
+				girl.style.top = girl.offsetTop - 15+'px';
+			}else if (event.keyCode==39) {
+				girl.src='girl_right.png';
+				girl.style.left = girl.offsetLeft + 15+'px';
+			}else if (event.keyCode==40) {
+				girl.src='girl_bottom.png';
+				girl.style.top = girl.offsetTop + 15+'px';
+			}
+		}
+	}
+	</script>
+</body>
+</html>
